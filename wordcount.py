@@ -8,13 +8,13 @@
 # Add to current count if word appears again.
 
 import string
-# from collections import Counter
+from collections import Counter
 from sys import argv
 
 def count_words(filename):
     testfile = open(filename)
 
-    word_dictionary = {}
+    word_dictionary = Counter()
 
     for line in testfile:
         line = line.rstrip()
